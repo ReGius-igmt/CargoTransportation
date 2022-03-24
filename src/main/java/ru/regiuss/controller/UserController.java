@@ -40,12 +40,14 @@ public class UserController {
     @JsonView(Views.Public.class)
     private User getAll(@RequestBody User user){
         user.setId(null);
-        try {
-            MessageDigest digest = MessageDigest.getInstance("SHA-256");
-            byte[] bytes = digest.digest(user.getPass().getBytes(StandardCharsets.UTF_8));
-            user.setPass(Utils.getHash(bytes));
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
+        if(user.getPass() != null){
+            try {
+                MessageDigest digest = MessageDigest.getInstance("SHA-256");
+                byte[] bytes = digest.digest(user.getPass().getBytes(StandardCharsets.UTF_8));
+                user.setPass(Utils.getHash(bytes));
+            } catch (NoSuchAlgorithmException e) {
+                e.printStackTrace();
+            }
         }
         service.save(user);
         return user;
@@ -59,12 +61,14 @@ public class UserController {
         userDB.setPatronymic(user.getPatronymic());
         userDB.setRoles(user.getRoles());
         userDB.setLogin(user.getLogin());
-        try {
-            MessageDigest digest = MessageDigest.getInstance("SHA-256");
-            byte[] bytes = digest.digest(user.getPass().getBytes(StandardCharsets.UTF_8));
-            userDB.setPass(Utils.getHash(bytes));
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
+        if(user.getPass() != null){
+            try {
+                MessageDigest digest = MessageDigest.getInstance("SHA-256");
+                byte[] bytes = digest.digest(user.getPass().getBytes(StandardCharsets.UTF_8));
+                userDB.setPass(Utils.getHash(bytes));
+            } catch (NoSuchAlgorithmException e) {
+                e.printStackTrace();
+            }
         }
         service.save(userDB);
         return userDB;
