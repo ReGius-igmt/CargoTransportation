@@ -4,9 +4,9 @@ import com.fasterxml.jackson.annotation.JsonView;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 import ru.regiuss.model.User;
-import ru.regiuss.service.UserService;
 import ru.regiuss.utils.Utils;
 import ru.regiuss.utils.Views;
+import ru.regiuss.service.UserService;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;

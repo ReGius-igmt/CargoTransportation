@@ -6,8 +6,6 @@ import org.springframework.stereotype.Service;
 import ru.regiuss.model.Transport;
 import ru.regiuss.repository.TransportRepository;
 
-import java.util.List;
-
 @Service
 public class TransportService {
     private final TransportRepository repository;

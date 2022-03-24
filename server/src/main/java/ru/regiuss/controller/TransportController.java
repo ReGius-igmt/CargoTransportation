@@ -4,11 +4,9 @@ import com.fasterxml.jackson.annotation.JsonView;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.*;
-import ru.regiuss.model.Transport;
 import ru.regiuss.service.TransportService;
+import ru.regiuss.model.Transport;
 import ru.regiuss.utils.Views;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/transport")
