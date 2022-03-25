@@ -1,7 +1,6 @@
 import org.junit.Test;
-import org.junit.Assert;
-import ru.regiuss.Point;
-import ru.regiuss.Route;
+import ru.regiuss.routelibrary.Point;
+import ru.regiuss.routelibrary.Route;
 
 import java.util.List;
 import java.util.Set;
