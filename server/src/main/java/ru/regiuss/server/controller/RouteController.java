@@ -28,8 +28,6 @@ public class RouteController {
 
     @PostMapping("/points")
     public Point get(@RequestBody Point point){
-        System.out.println(point);
-        System.out.println((ru.regiuss.routelibrary.Point)point);
         point.setId(null);
         service.save(point);
         return point;
