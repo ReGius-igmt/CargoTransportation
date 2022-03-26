@@ -1,0 +1,16 @@
+#sidePanel ToggleButton, #sidePanel Button{
+    -fx-background-color: transparent;
+}
+
+ToggleButton:hover{
+    -fx-cursor: hand;
+}
+
+Button:hover{
+    -fx-cursor: hand;
+    -fx-text-fill: red;
+}
+
+ToggleButton:selected{
+    -fx-text-fill: red;
+}
