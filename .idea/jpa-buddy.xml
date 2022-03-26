@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="JpaBuddyIdeaProjectConfig">
-    <option name="defaultUnitInitialized" value="true" />
-    <option name="reverseEngineeringLastDbConnectionId" value="548e9c0b-9eeb-4717-8385-43f4b1d8ede2" />
-    <option name="reLastEntityCreationPackage" value="server/src/main/java/ru/regiuss/cargotransportation/server/model" />
-  </component>
-</project>
